@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { WateringCalendarComponent } from './watering-calendar/watering-calendar.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { CalendarComponent } from './components/calendar/calendar.component'; // Importa CalendarComponent
 
 const routes: Routes = [
   {
@@ -15,9 +16,19 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'watering-calendar',
-    component: WateringCalendarComponent,
-    pathMatch: 'full'
+    path: 'home',
+    component: TabsComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'calendario',
+        pathMatch: 'full'
+      },
+      {
+        path: 'calendario',
+        component: CalendarComponent
+      }
+    ]
   }
 ];
 

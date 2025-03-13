@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { WateringCalendarComponent } from './watering-calendar.component';
+import { TabsComponent } from './tabs.component';
 import { CalendarComponent } from '../components/calendar/calendar.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -11,7 +11,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
-    WateringCalendarComponent,
+    TabsComponent,
     CalendarComponent,
     SidebarComponent,
   ],
@@ -24,9 +24,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatGridListModule
   ],
   exports: [
-    WateringCalendarComponent,
+    TabsComponent,
     CalendarComponent,
     SidebarComponent
   ],
 })
-export class WateringCalendarModule {}
+export class TabsModule {}

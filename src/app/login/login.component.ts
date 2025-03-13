@@ -13,6 +13,6 @@ export class LoginComponent {
 
   onLogin(): void {
     console.log('Login successful');
-    this.router.navigate(['/watering-calendar']);
+    this.router.navigate(['/home']);
   }
 }
