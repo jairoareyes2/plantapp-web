@@ -1,5 +1,5 @@
 {
-  "name": "plantapp-web-jr",
+  "name": "plantapp-web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:plantapp-web-jr": "node dist/plantapp-web-jr/server/server.mjs"
+    "serve:ssr:plantapp-web": "node dist/plantapp-web/server/server.mjs"
   },
   "private": true,
   "dependencies": {
