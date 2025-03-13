@@ -1,4 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@use '_theme-colors' as my-theme;
+@use '@angular/material' as mat;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Lato, Roboto, "Helvetica Neue", sans-serif; }
+html {
+  @include mat.theme((
+    color: (
+      primary: my-theme.$primary-palette,
+      tertiary: my-theme.$tertiary-palette
+    ),
+    typography: Lato,
+    density: 0,
+  ));
+
+  height: 100%;
+  background-color: var(--mat-sys-surface-bright);
+}
+
+body { margin: 0; font-family: Lato, "Helvetica Neue", sans-serif; }
