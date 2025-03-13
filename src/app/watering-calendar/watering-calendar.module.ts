@@ -1,8 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { WateringCalendarComponent } from './watering-calendar.component';
 import { CalendarComponent } from '../components/calendar/calendar.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -10,7 +14,17 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
     CalendarComponent,
     SidebarComponent,
   ],
-  imports: [CommonModule],
-  exports: [WateringCalendarComponent, CalendarComponent, SidebarComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
+  ],
+  exports: [
+    WateringCalendarComponent,
+    CalendarComponent,
+    SidebarComponent
+  ],
 })
-export class WaterinCalendarModule {}
+export class WateringCalendarModule {}
