@@ -1,0 +1,28 @@
+.calendar-container {
+    padding: 20px;
+  }
+  
+  .calendar {
+    width: 100%;
+  }
+  
+  .day {
+    background-color: #d4edf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .has-events {
+    font-weight: bold;
+  }
+  
+  .day-content {
+    text-align: center;
+  }
+  
+  .date {
+    font-weight: bold;
+    display: block;
+  }
+  
