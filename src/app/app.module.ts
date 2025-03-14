@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 import { TabsModule } from './tabs/tabs.module';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,8 @@ import { TabsModule } from './tabs/tabs.module';
         TabsModule,
         BrowserModule,
         BrowserAnimationsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     ],
     providers: [],
     bootstrap: [AppComponent]

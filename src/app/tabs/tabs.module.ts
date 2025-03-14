@@ -8,16 +8,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatDatepickerModule } from '@angular/material/datepicker'; 
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCard, MatCardTitle } from '@angular/material/card';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
-  declarations: [
-    TabsComponent,
-    CalendarComponent,
-    SidebarComponent,
-  ],
+  declarations: [TabsComponent, CalendarComponent, SidebarComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -25,14 +21,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     MatListModule,
     MatGridListModule,
-    MatFormFieldModule,
-    MatDatepickerModule, 
-    MatNativeDateModule
+    MatCard,
+    MatCardTitle,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ],
-  exports: [
-    TabsComponent,
-    CalendarComponent,
-    SidebarComponent
-  ],
+  exports: [TabsComponent, CalendarComponent, SidebarComponent],
 })
 export class TabsModule {}

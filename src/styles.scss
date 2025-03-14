@@ -1,5 +1,6 @@
 @use '_theme-colors' as my-theme;
 @use '@angular/material' as mat;
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 
 html {
   @include mat.theme((

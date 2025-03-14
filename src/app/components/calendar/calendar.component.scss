@@ -1,28 +1,79 @@
+.calendar-view{
+  background-color: var(--mat-sys-on-secondary);
+}
+
 .calendar-container {
-    padding: 20px;
-  }
-  
-  .calendar {
-    width: 100%;
-  }
-  
-  .day {
-    background-color: #d4edf7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .has-events {
-    font-weight: bold;
-  }
-  
-  .day-content {
-    text-align: center;
-  }
-  
-  .date {
-    font-weight: bold;
-    display: block;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 5%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.mwl-calendar {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 5%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.calendar-title {
+  text-transform: capitalize;
+}
+
+::ng-deep .cal-month-view {
+  width: 100%; 
+}
+
+::ng-deep .cal-month-view .cal-days .cal-cell-row {
+  border-bottom-color: var(--mat-sys-on-secondary);
+}
+
+::ng-deep .cal-day-cell {
+  min-width: 100px;
+  height: 100px;
+  padding: 5px;
+  background-color: var(--mat-sys-tertiary-container);
+  border: 10px solid var(--mat-sys-on-secondary);
+  display: flex;
+  stroke: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+::ng-deep .event-title {
+  font-size: var(--mat-sys-label-small-size);
+  font-weight: normal;
+  color: var(--mat-sys-secondary);
+  margin-left: 5px;
+}
+
+::ng-deep .cal-month-view .cal-day-badge {
+  background-color: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+}
+
+.header-button{
+  background-color: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0% 2%;
+  cursor: pointer;
+}
+
+.header-button:hover{
+  opacity: 0.8;
+}
