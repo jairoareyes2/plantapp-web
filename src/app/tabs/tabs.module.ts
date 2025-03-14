@@ -8,7 +8,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCard, MatCardTitle, MatCardContent } from '@angular/material/card';
+import { MatCard, MatCardHeader, MatCardTitle, MatCardContent } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { SpotsComponent } from '../components/spots/spots.component';
@@ -23,8 +24,10 @@ import { SpotsComponent } from '../components/spots/spots.component';
     MatListModule,
     MatGridListModule,
     MatCard,
+    MatCardHeader,
     MatCardTitle,
     MatCardContent,
+    MatButtonModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

@@ -1,16 +1,80 @@
-.container {
+.spots-container {
   display: flex;
+  flex-direction: column;
+  height: 80vh;
+  padding: 16px;
 }
 
-mat-list {
+.drawer-container {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  overflow: auto;
+  width: 100%;
+  background-color: var(--mat-sys-on-secondary);
+  border: none;
+}
+
+.drawer {
   width: 30%;
+  background: var(--mat-sys-on-secondary);
+  padding: 16px;
+  border-radius: 8px;
 }
 
-.details {
-  margin-left: 20px;
-  width: 70%;
+mat-list-item {
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
-button {
-  margin-top: 20px;
+mat-list-item:not(.selected) {
+  background: var(--mat-sys-surface-container-low); // Estilo para elementos no seleccionados
+}
+
+.selected {
+  background: var(--mat-sys-surface-container-high) !important;
+}
+
+h3{
+    text-align: center; 
+    font-weight: normal;
+}
+
+h2{
+    font-weight: normal;
+}
+
+.spot-name{
+    font-weight: normal;
+}
+
+.spot-name.selected{
+    font-weight: bold;
+}
+
+.description {
+  flex: 1;
+  padding: 20px;
+  background: var(--mat-sys-surface-container-high);
+  width: 100hv;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+} 
+
+button[mat-raised-button] {
+  background-color: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+}
+
+.mat-drawer-content {
+  width: 100%;
+  margin-right: 5%;
 }

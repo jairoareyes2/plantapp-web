@@ -1,22 +1,35 @@
-<!-- filepath: src/app/components/spots/spots.component.html -->
-<div class="container">
-  <mat-list role="list">
-    <mat-list-item role="listitem" *ngFor="let spot of spots" (click)="selectSpot(spot)">
-      <h3 matLine>{{ spot.name }}</h3>
-      <p matLine>Tipo: {{ spot.type }}, capacidad: {{ spot.capacity }} m2, tipo de luz: {{ spot.lightType }}</p>
-    </mat-list-item>
-  </mat-list>
-  <div class="details" *ngIf="selectedSpot">
-    <mat-card>
-      <mat-card-title>{{ selectedSpot.name }}</mat-card-title>
-      <mat-card-content>
-        <p>Tipo de espacio: {{ selectedSpot.type }}</p>
-        <p>Capacidad: {{ selectedSpot.capacity }} m2</p>
-        <p>Tipo de luz: {{ selectedSpot.lightType }}</p>
-        <p>Tipo de aire: {{ selectedSpot.airType }}</p>
-        <p>Número de plantas en este espacio: {{ selectedSpot.plantCount }}</p>
-      </mat-card-content>
-    </mat-card>
+<div class="spots-container">
+  <h2>Espacios</h2>
+  <mat-drawer-container class="drawer-container">
+    <!-- Lista de espacios -->
+    <mat-drawer mode="side" opened class="drawer">
+      <h3>Lista de espacios</h3>
+      <mat-list>
+        <mat-list-item
+          *ngFor="let spot of spots"
+          (click)="selectSpot(spot)"
+          [ngClass]="{ 'selected': spot === selectedSpot }">
+          <div>
+            <strong class="spot-name" [ngClass]="{ 'selected': spot === selectedSpot }">{{ spot.name }}</strong><br>
+            <small>Tipo: {{ spot.type }}, capacidad: {{ spot.capacity }}, tipo de luz: {{ spot.lightType }}</small>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+      <div class="description">
+        <h3>Descripción</h3>
+        <p><strong>Tipo de espacio:</strong> {{ selectedSpot?.type }}</p>
+        <p><strong>Capacidad:</strong> {{ selectedSpot?.capacity }}</p>
+        <p><strong>Tipo de luz:</strong> {{ selectedSpot?.lightType }}</p>
+        <p><strong>Tipo e aire:</strong> {{ selectedSpot?.airType }}</p>
+        <p><strong>Número de plantas en este espacio:</strong> {{ selectedSpot?.plantCount }}</p>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="createSpot()">Crear espacio</button>
   </div>
 </div>
-<button mat-raised-button color="primary" (click)="createSpot()">Crear espacio</button>
