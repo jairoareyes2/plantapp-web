@@ -1,0 +1,16 @@
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 250px;
+    background-color: #f6f9f3;
+    padding: 16px;
+  }
+  
+  mat-nav-list a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  

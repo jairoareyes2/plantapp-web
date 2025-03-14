@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="sidenav">
+      <h2>Calendario de riego</h2>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/home/calendario">
+          <mat-icon>calendar_today</mat-icon> Calendario
+        </a>
+        <a mat-list-item routerLink="/home/espacios">
+          <mat-icon>home</mat-icon> Espacios
+        </a>
+        <a mat-list-item routerLink="/home/informe">
+          <mat-icon>bar_chart</mat-icon> Informe
+        </a>
+        <a mat-list-item routerLink="/home/perfil">
+          <mat-icon>person</mat-icon> Perfil
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
