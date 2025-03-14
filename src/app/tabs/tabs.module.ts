@@ -17,14 +17,18 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { SpotsComponent } from '../components/spots/spots.component';
 import { CreateSpotComponent } from '../components/create-spot/create-spot.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {PerfilComponent} from '../components/perfil/perfil.component';
+import {PasswordComponent} from '../components/password/password.component';
 
 @NgModule({
-  declarations: [TabsComponent, 
-    CalendarComponent, 
-    SidebarComponent, 
+  declarations: [TabsComponent,
+    CalendarComponent,
+    SidebarComponent,
     SpotsComponent,
-    CreateSpotComponent],
+    CreateSpotComponent,
+    PerfilComponent,
+    PasswordComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -45,7 +49,8 @@ import { FormsModule } from '@angular/forms';
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
+    ReactiveFormsModule,
   ],
-  exports: [TabsComponent, CalendarComponent, SidebarComponent],
+  exports: [TabsComponent, CalendarComponent, SidebarComponent, PerfilComponent, PasswordComponent],
 })
 export class TabsModule {}
