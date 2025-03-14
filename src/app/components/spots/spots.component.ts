@@ -44,9 +44,17 @@ export class SpotsComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
+      if (result && this.isValidSpot(result)) {
         this.spots.push(result);
       }
     });
+  }
+
+  private isValidSpot(spot: Spot): boolean {
+    return spot.name.trim() !== '' &&
+           spot.type.trim() !== '' &&
+           spot.capacity > 0 &&
+           spot.lightType.trim() !== '' &&
+           spot.airType.trim() !== '';
   }
 }
