@@ -5,16 +5,22 @@
   </div>
   <div class="right-section">
     <h2>Inicio de sesión</h2>
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
       <mat-form-field appearance="fill">
         <mat-label>Correo electrónico</mat-label>
-        <input matInput type="email" required>
+        <input matInput formControlName="email" type="email" required>
+        <mat-error *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+          Correo electrónico no válido
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Contraseña</mat-label>
-        <input matInput type="password" required>
+        <input matInput formControlName="password" type="password" required>
+        <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          Contraseña requerida
+        </mat-error>
       </mat-form-field>
-      <button mat-raised-button color="primary" (click)="onLogin()">Iniciar sesión</button>
+      <button mat-raised-button type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
     </form>
   </div>
 </div>
