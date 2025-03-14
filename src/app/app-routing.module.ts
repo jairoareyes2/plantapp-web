@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { TabsComponent } from './tabs/tabs.component';
-import { CalendarComponent } from './components/calendar/calendar.component'; // Importa CalendarComponent
+import { CalendarComponent } from './components/calendar/calendar.component';
 import { SpotsComponent } from './components/spots/spots.component';
+import {PerfilComponent} from './components/perfil/perfil.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent,
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path: 'espacios',
         component: SpotsComponent
+      },
+      {
+        path: 'perfil',
+        component: PerfilComponent
       }
     ]
   }
