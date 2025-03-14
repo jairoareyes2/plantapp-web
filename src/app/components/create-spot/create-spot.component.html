@@ -1,0 +1,62 @@
+<mat-dialog-content class="create-spot-container">
+  <h2>Crear espacio</h2>
+
+  <form (ngSubmit)="onSubmit()" #createSpotForm="ngForm">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Nombre del espacio</mat-label>
+      <input matInput [(ngModel)]="spot.name" name="name" required />
+    </mat-form-field>
+
+    <div class="option-group">
+      <span>Tipo de espacio:</span>
+      <mat-radio-group [(ngModel)]="spot.type" name="type" required>
+        <mat-radio-button value="Interior">Interior</mat-radio-button>
+        <mat-radio-button value="Exterior">Exterior</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Capacidad (m2)</mat-label>
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="spot.capacity"
+        name="capacity"
+        required
+      />
+    </mat-form-field>
+
+    <div class="option-group">
+      <span>Tipo de luz:</span>
+      <mat-radio-group [(ngModel)]="spot.lightType" name="lightType" required>
+        <mat-radio-button value="natural">Natural</mat-radio-button>
+        <mat-radio-button value="artificial">Artificial</mat-radio-button>
+        <mat-radio-button value="mixta">Mixta</mat-radio-button>
+      </mat-radio-group>
+
+    </div>
+
+    <div class="option-group">
+      <span>Tipo de aire:</span>
+      <mat-radio-group [(ngModel)]="spot.airType" name="airType" required>
+        <mat-radio-button value="natural">Natural</mat-radio-button>
+        <mat-radio-button value="artificial">Artificial</mat-radio-button>
+        <mat-radio-button value="mixta">Mixta</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="button-container">
+      <button mat-stroked-button color="primary" (click)="onCancel()">
+        Cancelar
+      </button>
+      <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="!createSpotForm.form.valid"
+      >
+        Crear espacio
+      </button>
+    </div>
+  </form>
+</mat-dialog-content>

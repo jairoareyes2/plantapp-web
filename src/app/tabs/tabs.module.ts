@@ -10,12 +10,21 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCard, MatCardHeader, MatCardTitle, MatCardContent } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { SpotsComponent } from '../components/spots/spots.component';
+import { CreateSpotComponent } from '../components/create-spot/create-spot.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [TabsComponent, CalendarComponent, SidebarComponent, SpotsComponent],
+  declarations: [TabsComponent, 
+    CalendarComponent, 
+    SidebarComponent, 
+    SpotsComponent,
+    CreateSpotComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -28,6 +37,10 @@ import { SpotsComponent } from '../components/spots/spots.component';
     MatCardTitle,
     MatCardContent,
     MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    MatRadioModule,
+    FormsModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

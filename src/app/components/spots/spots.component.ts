@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CreateSpotComponent } from '../create-spot/create-spot.component';
 
 interface Spot {
   name: string;
@@ -25,7 +27,7 @@ export class SpotsComponent {
 
   selectedSpot: Spot | null = null;
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
     // Selecciona el primer elemento por defecto
     if (this.spots.length > 0) {
       this.selectedSpot = this.spots[0];
@@ -37,6 +39,14 @@ export class SpotsComponent {
   }
 
   createSpot(): void {
-    // Lógica para crear un nuevo espacio
+    const dialogRef = this.dialog.open(CreateSpotComponent, {
+      width: '450px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.spots.push(result);
+      }
+    });
   }
 }
