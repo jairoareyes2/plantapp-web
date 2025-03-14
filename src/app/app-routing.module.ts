@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CalendarComponent } from './components/calendar/calendar.component'; // Importa CalendarComponent
+import { SpotsComponent } from './components/spots/spots.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'calendario',
         component: CalendarComponent
+      },
+      {
+        path: 'espacios',
+        component: SpotsComponent
       }
     ]
   }

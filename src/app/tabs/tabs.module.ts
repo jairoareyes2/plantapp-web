@@ -8,12 +8,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCard, MatCardTitle } from '@angular/material/card';
+import { MatCard, MatCardTitle, MatCardContent } from '@angular/material/card';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { SpotsComponent } from '../components/spots/spots.component';
 
 @NgModule({
-  declarations: [TabsComponent, CalendarComponent, SidebarComponent],
+  declarations: [TabsComponent, CalendarComponent, SidebarComponent, SpotsComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -23,6 +24,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     MatGridListModule,
     MatCard,
     MatCardTitle,
+    MatCardContent,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
