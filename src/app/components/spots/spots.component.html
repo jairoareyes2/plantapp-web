@@ -4,10 +4,11 @@
     <!-- Lista de espacios -->
     <mat-drawer mode="side" opened class="drawer">
       <h3>Lista de espacios</h3>
-      <mat-list>
+      <mat-list class="list">
         <mat-list-item
           *ngFor="let spot of spots"
           (click)="selectSpot(spot)"
+          class="list-item__content"
           [ngClass]="{ 'selected': spot === selectedSpot }">
           <div>
             <strong class="spot-name" [ngClass]="{ 'selected': spot === selectedSpot }">{{ spot.name }}</strong><br>

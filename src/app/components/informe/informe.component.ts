@@ -2,6 +2,8 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatButton} from '@angular/material/button';
+import {MatDialog} from '@angular/material/dialog';
+import {InformeModalComponent} from '../informe-modal/informe-modal.component';
 
 
 @Component({
@@ -17,8 +19,16 @@ export class InformeComponent implements AfterViewInit{
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
+  constructor(public dialog: MatDialog) {}
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  generarReporte(): void {
+    this.dialog.open(InformeModalComponent, {
+      width: '450px'
+    });
   }
 }
 

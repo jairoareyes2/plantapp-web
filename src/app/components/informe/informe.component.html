@@ -1,5 +1,5 @@
 <section>
-  <h1 class="title display-large"> Informe</h1>
+  <h1 class="title"> Informe</h1>
   <article class="informe-container">
     <div class="mat-elevation-z8 table-container">
       <table mat-table [dataSource]="dataSource">
@@ -44,7 +44,7 @@
       </mat-paginator>
     </div>
     <div class="button-container">
-      <button mat-flat-button color="primary" type="button">Generar reporte</button>
+      <button mat-flat-button color="primary" type="button" (click)="generarReporte()">Generar reporte</button>
     </div>
   </article>
 
