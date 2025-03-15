@@ -22,7 +22,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-top: 5%;
+  margin-top: 1rem;
   font-size: 18px;
   font-weight: bold;
 }
@@ -32,7 +32,7 @@
 }
 
 ::ng-deep .cal-month-view {
-  width: 100%; 
+  width: 100%;
 }
 
 ::ng-deep .cal-month-view .cal-days .cal-cell-row {
@@ -79,6 +79,7 @@
 }
 
 h2{
-  font-weight: normal;
-  margin-top: 4%;
+  font: var(--mat-sys-title-large);
+  margin-top: 2.625rem;
+  margin-bottom: 1.125rem;
 }

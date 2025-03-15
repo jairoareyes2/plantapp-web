@@ -1,0 +1,22 @@
+<mat-dialog-content class="informe-container">
+  <h2>Generar reporte</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="option-group">
+      <span>Formato:</span>
+      <mat-radio-group  name="lightType" required>
+        <mat-radio-button value="pdf" checked>PDF</mat-radio-button>
+        <mat-radio-button value="csv">CSV</mat-radio-button>
+        <mat-radio-button value="excel">Excel</mat-radio-button>
+      </mat-radio-group>
+
+    </div>
+    <div class="button-container">
+      <button mat-stroked-button color="primary" mat-dialog-close>
+        Cancelar
+      </button>
+      <button mat-flat-button color="primary" type="submit">
+        Generar reporte
+      </button>
+    </div>
+  </form>
+</mat-dialog-content>
