@@ -1,0 +1,15 @@
+.eliminar-container{
+  padding: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button-container button {
+  flex: 1;
+  margin: 0 5px;
+}
