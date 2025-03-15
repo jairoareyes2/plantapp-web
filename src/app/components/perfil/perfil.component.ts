@@ -13,7 +13,6 @@ export class PerfilComponent {
   constructor(public dialog: MatDialog) {
   }
 
-
   changePassword(): void {
     const dialogRef = this.dialog.open(PasswordComponent, {
       width: '450px'

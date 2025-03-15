@@ -5,6 +5,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { SpotsComponent } from './components/spots/spots.component';
 import {PerfilComponent} from './components/perfil/perfil.component';
+import {InformeComponent} from './components/informe/informe.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
       {
         path: 'perfil',
         component: PerfilComponent
+      },
+      {
+        path: 'informe',
+        component: InformeComponent
       }
     ]
   }

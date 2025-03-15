@@ -2,7 +2,7 @@ section {
   display: flex;
   flex-direction: column;
   height: 95vh;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1.5rem 1rem 1rem 0;
 }
 
 .title{
@@ -53,4 +53,5 @@ section {
 .mat-mdc-raised-button:not(:disabled){
   background-color: var(--mat-sys-primary);
   color: var(--mat-sys-on-primary);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }

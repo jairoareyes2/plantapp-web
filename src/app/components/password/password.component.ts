@@ -25,11 +25,7 @@ export class PasswordComponent {
 
   constructor(private dialogRef: MatDialogRef<PasswordComponent>) { }
 
-  onCancel(): void {
-    this.dialogRef.close();
-  }
-
-  onSubmit(): void {
+  onSubmitChangePassword(): void {
     this.dialogRef.close();
     this.openSnackBar('Tu contraseña se ha cambiado correctamente');
   }

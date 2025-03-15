@@ -20,6 +20,9 @@ import { CreateSpotComponent } from '../components/create-spot/create-spot.compo
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {PerfilComponent} from '../components/perfil/perfil.component';
 import {PasswordComponent} from '../components/password/password.component';
+import {InformeComponent} from '../components/informe/informe.component';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTable} from '@angular/material/table';
 
 @NgModule({
   declarations: [TabsComponent,
@@ -50,6 +53,8 @@ import {PasswordComponent} from '../components/password/password.component';
       useFactory: adapterFactory,
     }),
     ReactiveFormsModule,
+    MatPaginator,
+    MatTable,
   ],
   exports: [TabsComponent, CalendarComponent, SidebarComponent, PerfilComponent, PasswordComponent],
 })

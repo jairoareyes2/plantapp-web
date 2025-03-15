@@ -1,0 +1,44 @@
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem 1rem 1rem 0;
+}
+
+.informe-container {
+  background-color: #fff;
+  height: 100%;
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+}
+
+.table-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mat-column-id,
+.mat-column-fecha,
+.mat-column-agua,
+.mat-column-planta,
+.mat-column-nutrientes,
+.mat-column-comentarios{
+  border-left: 1px solid #1b1b1b;
+  border-right: 1px solid #1b1b1b;
+  border-top: 1px solid #1b1b1b;
+}
+
+button{
+  margin-top: 2rem;
+  width: fit-content;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.button-container{
+  display: flex;
+  justify-content: end;
+}

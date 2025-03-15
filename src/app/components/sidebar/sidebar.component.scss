@@ -3,10 +3,13 @@
 }
 
 .sidenav {
-  width: 250px;
+  width: fit-content;
   background-color: var(--mat-sys-surface);
-  padding: 16px;
-  padding-top: 5%;
+  padding: 2.75rem 0.5rem 0.5rem 0.5rem;
+  text-align: center;
+  .menu{
+    margin-bottom:2.5rem;
+  }
 }
 
 .active-link {
@@ -24,4 +27,5 @@ mat-nav-list a {
   gap: 8px;
   text-decoration: none;
   color: inherit;
+  padding: 0;
 }
