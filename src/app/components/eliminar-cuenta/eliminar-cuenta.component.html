@@ -1,0 +1,12 @@
+<mat-dialog-content class="eliminar-container">
+  <h2>¿Estás seguro de eliminar tu cuenta?</h2>
+  <p>Si eliminas tu cuenta y quieres regresar deberás crear una cuenta nueva</p>
+  <div class="button-container">
+    <button mat-stroked-button color="primary" mat-dialog-close>
+      Cancelar
+    </button>
+    <button mat-flat-button color="primary" type="button" (click)="eliminarCuenta()">
+      Eliminar cuenta
+    </button>
+  </div>
+</mat-dialog-content>

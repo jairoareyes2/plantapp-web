@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {PasswordComponent} from '../password/password.component';
 import {MatDialog} from '@angular/material/dialog';
+import {EliminarCuentaComponent} from '../eliminar-cuenta/eliminar-cuenta.component';
 
 @Component({
   selector: 'app-perfil',
@@ -14,14 +15,14 @@ export class PerfilComponent {
   }
 
   changePassword(): void {
-    const dialogRef = this.dialog.open(PasswordComponent, {
+    this.dialog.open(PasswordComponent, {
       width: '450px'
     });
+  }
 
-    dialogRef.afterClosed().subscribe((result: any) => {
-      if (result ) {
-
-      }
+  eliminarCuenta(): void{
+    this.dialog.open(EliminarCuentaComponent, {
+      width: '450px'
     });
   }
 
